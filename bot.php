@@ -20,7 +20,7 @@ if (!is_null($events['events'])) {
 				 "กูให้มึงตอบใหม่  '.$text.'  ไม่ใช่ชื่อมึง '.$text.' '.'เอาดีๆ",
 				 "พอๆ กูลำคาน บล๊อคแม่ง",
 				 "'กูไม่เชื่อว่า '.$text.'  เป็นเชื่อมึง'");
-			$random_keys=array_rand($a,1);
+			$random_keys=array_rand($a);
 			if($text=='เปิดไฟ'){
 				
 			$messages = [
