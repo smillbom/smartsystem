@@ -5,6 +5,8 @@ $content = file_get_contents('php://input');
 // Parse JSON
 $events = json_decode($content, true);
 // Validate parsed JSON data
+
+$num = 0;$name='';
 if (!is_null($events['events'])) {
 	// Loop through each event
 	foreach ($events['events'] as $event) {
@@ -13,7 +15,7 @@ if (!is_null($events['events'])) {
 			// Get text sent
 			$text = $event['message']['text'];
 			$replyToken = $event['replyToken'];
-			$num = 0;$name='';
+			
 			if($text=='เปิดไฟ'){
 				
 			$messages = [
