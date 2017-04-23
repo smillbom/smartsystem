@@ -1,6 +1,7 @@
 <php
+	$access_token = 'hLkOg0z8Bb3Ch0auEZ/7m5/CoX1aFlASR2K4n7uzTDiPNSLASd1QKaAxyb1y8vUVLtghB9VRIfCqmCCn0sCawnCy8ItyNkIGWyEWT5GakNX3voD2oguz4jJWMkckbsLqbV3J1XratjLxjtWmNx0mRAdB04t89/1O/w1cDnyilFU=';
 
-    $url = 'https://api.line.me/v2/bot/message/reply';
+   	 $url = 'https://api.line.me/v2/bot/message/reply';
 			$data = [
 				'replyToken' => $replyToken,
 				'messages' => [$messages],
