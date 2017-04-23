@@ -13,6 +13,7 @@ if (!is_null($events['events'])) {
 			// Get text sent
 			$text = $event['message']['text'];
 			$replyToken = $event['replyToken'];
+			$num = 0;$name='';
 			if($text=='เปิดไฟ'){
 				
 			$messages = [
@@ -33,13 +34,38 @@ if (!is_null($events['events'])) {
 				'text' => 'ปิดไฟแล้ว'
 			];		
 			
-			}else{			
-			
+			}else if ($num==0){			
+			$num++;
+				$name = $text;
 			$messages = [
 				'type' => 'text',
 				'text' => $text.' '.'ชื่อพ่องมึงหรอ'.' '.'เอาชื่อมึง ดิว่ะ'
 			];
 			}
+			else if ($num==1{			
+			$num++;
+			$messages = [
+				'type' => 'text',
+				'text' => 'ใช่หรอ'.' '.'กูให้มึงตอบใหม่'
+			];
+			}
+			else if ($num==2){			
+			$num++;
+			$messages = [
+				'type' => 'text',
+				'text' => 'กูให้มึงตอบใหม่  '.$name.'  ไม่ใช่ชื่อมึง '.$text.'  ไม่ใช่ชื่อมึง '.'เอาดีๆ'
+			];
+			}
+			else if ($num==3){			
+			$num=0;
+			$messages = [
+				'type' => 'text',
+				'text' => 'พอๆ กูลำคาน บล๊อคแม่ง'
+			];
+			}
+			
+			
+			
 			
 			
 			
