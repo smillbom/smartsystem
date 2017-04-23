@@ -55,7 +55,7 @@ if (!is_null($events['events'])) {
 			else if ($random_keys==2){
 			$messages = [
 				'type' => 'text',
-				'text' => 'กูให้มึงตอบใหม่  '.$text.'  ไม่ใช่ชื่อมึง '.$text.' '.'เอาดีๆ'		
+				'text' => 'กูให้มึงตอบใหม่  '.$text.'  ไม่ใช่ชื่อมึง '.' '.'เอาดีๆ'		
 			];
 			}
 			else if ($random_keys==3){
