@@ -15,11 +15,11 @@ if (!is_null($events['events'])) {
 			// Get text sent
 			$text = $event['message']['text'];
 			$replyToken = $event['replyToken'];
-			$a=array("$text.' '.'ชื่อพ่องมึงหรอ'.' '.'เอาชื่อมึง ดิว่ะ",
-				 "ใช่หรอ'.' '.'กูให้มึงตอบใหม่",
-				 "กูให้มึงตอบใหม่  '.$text.'  ไม่ใช่ชื่อมึง '.$text.' '.'เอาดีๆ",
-				 "พอๆ กูลำคาน บล๊อคแม่ง",
-				 "'กูไม่เชื่อว่า '.$text.'  เป็นเชื่อมึง'");
+			$a=array("0",
+				 "1",
+				 "2",
+				 "3",
+				 "4");
 			$random_keys=array_rand($a);
 			if($text=='เปิดไฟ'){
 				
@@ -41,14 +41,35 @@ if (!is_null($events['events'])) {
 				'text' => 'ปิดไฟแล้ว'
 			];		
 			
-			}else{	
+			}else if($random_keys==0) {	
 			$messages = [
 				'type' => 'text',
-				'text' => $random_keys			
+				'text' => $text.' '.'ชื่อพ่องมึงหรอ'.' '.'เอาชื่อมึง ดิว่ะ'			
+			];			
+			}else if ($random_keys==1){
+			$messages = [
+				'type' => 'text',
+				'text' => 'ใช่หรอ'.' '.'กูให้มึงตอบใหม่	'	
 			];
 			}
-			
-			
+			else if ($random_keys==2){
+			$messages = [
+				'type' => 'text',
+				'text' => 'กูให้มึงตอบใหม่  '.$text.'  ไม่ใช่ชื่อมึง '.$text.' '.'เอาดีๆ'		
+			];
+			}
+			else if ($random_keys==3){
+			$messages = [
+				'type' => 'text',
+				'text' => 'พอๆ กูลำคาน บล๊อคแม่ง'		
+			];
+			}
+			else if ($random_keys==4){
+			$messages = [
+				'type' => 'text',
+				'text' => 'กูไม่เชื่อว่า '.$text.'  เป็นเชื่อมึง'		
+			];
+			}
 			
 			
 			
