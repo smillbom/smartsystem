@@ -12,32 +12,23 @@ if (!is_null($events['events'])) {
 		if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
 			// Get text sent
 			$text = $event['message']['text'];
-			
-			if($text=='เปิดไฟ'){
-				// Get replyToken
 			$replyToken = $event['replyToken'];
-
-			// Build message to reply back
+			if($text=='เปิดไฟ'){
+				
 			$messages = [
 				'type' => 'text',
 				'text' => 'เปิดไฟแล้ว'
 			];
 			}
 			else if($text=='ปิดไฟ'){
-				// Get replyToken
-			$replyToken = $event['replyToken'];
-
-			// Build message to reply back
+			
 			$messages = [
 				'type' => 'text',
 				'text' => 'ปิดไฟแล้ว'
 			];		
 			
-			}else{
-					// Get replyToken
-			$replyToken = $event['replyToken'];
-
-			// Build message to reply back
+			}else{			
+			
 			$messages = [
 				'type' => 'text',
 				'text' => 'ไม่เข้าใจ'.' '.$text.' '.'หมายถึงอะไร'
