@@ -8,15 +8,19 @@ $events = json_decode($content, true);
 
 
 if (!is_null($events['events'])) {
-	// Loop through each event
-	$num = 2;$name='';
+	// Loop through each event	
 	foreach ($events['events'] as $event) {
 		// Reply only when message sent is in 'text' format
 		if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
 			// Get text sent
 			$text = $event['message']['text'];
 			$replyToken = $event['replyToken'];
-			
+			$a=array("$text.' '.'ชื่อพ่องมึงหรอ'.' '.'เอาชื่อมึง ดิว่ะ",
+				 "ใช่หรอ'.' '.'กูให้มึงตอบใหม่",
+				 "กูให้มึงตอบใหม่  '.$text.'  ไม่ใช่ชื่อมึง '.$text.' '.'เอาดีๆ",
+				 "พอๆ กูลำคาน บล๊อคแม่ง",
+				 "'กูไม่เชื่อว่า '.$text.'  เป็นเชื่อมึง'");
+			$random_keys=array_rand($a,1);
 			if($text=='เปิดไฟ'){
 				
 			$messages = [
@@ -37,35 +41,13 @@ if (!is_null($events['events'])) {
 				'text' => 'ปิดไฟแล้ว'
 			];		
 			
-			}else if ($num==0){			
-			$num++;
-				$name = $text;
+			}else{	
 			$messages = [
 				'type' => 'text',
-				'text' => $text.' '.'ชื่อพ่องมึงหรอ'.' '.'เอาชื่อมึง ดิว่ะ'
+				'text' => $random_keys			
 			];
 			}
-			else if ($num==1){			
-			$num++;
-			$messages = [
-				'type' => 'text',
-				'text' => 'ใช่หรอ'.' '.'กูให้มึงตอบใหม่'
-			];
-			}
-			else if ($num==2){			
-			$num++;
-			$messages = [
-				'type' => 'text',
-				'text' => 'กูให้มึงตอบใหม่  '.$name.'  ไม่ใช่ชื่อมึง '.$text.'  ไม่ใช่ชื่อมึง '.'เอาดีๆ'
-			];
-			}
-			else if ($num==3){			
-			$num=0;
-			$messages = [
-				'type' => 'text',
-				'text' => 'พอๆ กูลำคาน บล๊อคแม่ง'
-			];
-			}
+			
 			
 			
 			
