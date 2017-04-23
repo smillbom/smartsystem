@@ -44,7 +44,7 @@ if (!is_null($events['events'])) {
 				'text' => $text.' '.'ชื่อพ่องมึงหรอ'.' '.'เอาชื่อมึง ดิว่ะ'
 			];
 			}
-			else if ($num==1{			
+			else if ($num==1){			
 			$num++;
 			$messages = [
 				'type' => 'text',
