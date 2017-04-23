@@ -37,7 +37,7 @@ if (!is_null($events['events'])) {
 			];		
 			
 			}else if ($num==0){			
-			$num++;
+			$num=$num+1;
 				$name = $text;
 			$messages = [
 				'type' => 'text',
