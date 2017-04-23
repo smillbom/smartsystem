@@ -20,11 +20,11 @@ if (!is_null($events['events'])) {
 				'text' => 'เปิดไฟแล้ว'	
 			
 			];
-				$data = [
+				/*$data = [
 				'replyToken' => $replyToken,
 				'messages' => [$messages],
 			];
-				header('https://still-everglades-12727.herokuapp.com/sent.php?messages=$data');
+				header('https://still-everglades-12727.herokuapp.com/sent.php?messages=$data');*/
 			}
 			else if($text=='ปิดไฟ'){
 			
@@ -42,7 +42,7 @@ if (!is_null($events['events'])) {
 			}
 			
 			
-			/*
+			
 			// Make a POST Request to Messaging API to reply to sender
 			$url = 'https://api.line.me/v2/bot/message/reply';
 			$data = [
@@ -61,7 +61,7 @@ if (!is_null($events['events'])) {
 			$result = curl_exec($ch);
 			curl_close($ch);
 
-			echo $result . "\r\n";*/
+			echo $result . "\r\n";
 		}
 	}
 }
