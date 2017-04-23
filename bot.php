@@ -17,7 +17,7 @@ if (!is_null($events['events'])) {
 
 			// Build message to reply back
 			$messages = [
-				'type' => 'ไง',
+				'type' => 'text',
 				'text' => 'ไงไต๋'
 			];
 
