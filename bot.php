@@ -17,8 +17,7 @@ if (!is_null($events['events'])) {
 				
 			$messages = [
 				'type' => 'text',
-				'text' => 'เปิดไฟแล้ว'
-				header('https://still-everglades-12727.herokuapp.com/sent.php?text=เปิดไฟแล้ว&type=text&token=$replyToken');
+				'text' => 'เปิดไฟแล้ว'				
 			];
 			}
 			else if($text=='ปิดไฟ'){
