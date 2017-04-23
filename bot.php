@@ -22,6 +22,17 @@ if (!is_null($events['events'])) {
 				'type' => 'text',
 				'text' => 'เปิดไฟแล้ว'
 			];
+			}
+			if($text=='ปิดไฟ'){
+				// Get replyToken
+			$replyToken = $event['replyToken'];
+
+			// Build message to reply back
+			$messages = [
+				'type' => 'text',
+				'text' => 'ปิดไฟแล้ว'
+			];		
+			
 			}else{
 					// Get replyToken
 			$replyToken = $event['replyToken'];
@@ -29,7 +40,7 @@ if (!is_null($events['events'])) {
 			// Build message to reply back
 			$messages = [
 				'type' => 'text',
-				'text' => $text
+				'text' => 'ไม่เข้าใจ'.' '.$text.' '.'หมายถึงอะไร'
 			];
 			}
 			
