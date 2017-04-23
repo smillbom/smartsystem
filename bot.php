@@ -23,7 +23,7 @@ if (!is_null($events['events'])) {
 				'text' => 'เปิดไฟแล้ว'
 			];
 			}
-			if($text=='ปิดไฟ'){
+			else if($text=='ปิดไฟ'){
 				// Get replyToken
 			$replyToken = $event['replyToken'];
 
