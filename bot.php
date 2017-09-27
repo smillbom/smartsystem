@@ -23,3 +23,5 @@ if (!empty($bot->isEvents)) {
 	exit();
 
 }
+echo '558855';
+?>
