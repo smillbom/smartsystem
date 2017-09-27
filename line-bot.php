@@ -1,5 +1,5 @@
 <?php
-include ('vendor/autoload.php');
+include ('smartsystem/autoload.php');
 use \LINE\LINEBot;
 use \LINE\LINEBot\HTTPClient;
 use \LINE\LINEBot\HTTPClient\CurlHTTPClient;
